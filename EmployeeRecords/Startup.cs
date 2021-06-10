@@ -1,7 +1,7 @@
 using CodeLabX.EntityFramework.Data;
 using CodeLabX.EntityFramework.Repository;
 using EmployeeRecords.Interfaces;
-using EmployeeRecords.Service;
+using EmployeeRecords.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
