@@ -1,4 +1,5 @@
-﻿using EmployeeRecords.Interfaces;
+﻿using EmployeeRecords.Data;
+using EmployeeRecords.Interfaces;
 using EmployeeRecords.Models;
 using Microsoft.EntityFrameworkCore;
 using System.Threading.Tasks;
@@ -36,6 +37,10 @@ namespace CodeLabX.EntityFramework.Data
             base.OnModelCreating(modelBuilder);
         }
 
-        private void OnDatabaseTableCreating(ModelBuilder modelBuilder) => modelBuilder.Entity<Employee>().ToTable(nameof(Employee));
+        private void OnDatabaseTableCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<Employee>().ToTable(nameof(Employee));
+            DataSeed.Seed(modelBuilder);
+        }
     }
 }
